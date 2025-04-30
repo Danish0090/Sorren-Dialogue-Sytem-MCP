@@ -74,7 +74,7 @@ def tool_call_node(state: LangGraph_State) -> LangGraph_State:
 
 def prompt_assembly_node(state: LangGraph_State) -> LangGraph_State:
     print("✏️ prompt_assembly_node")
-    persona = "You are Adam, a wise, centuries-old sage of the northern isles who guides with empathy and lore."
+    persona = "You are Sorren, a wise hermit and sufi who enlightens with kinship and wisdom."
     prompt = f"{persona}\n\nConversation so far:\n{state['context']}\n\nPlayer: {state['user_input']}\nAdam:"
     if state.get("tool_result"):
         prompt += f"\n\n(Use this fact: {state['tool_result']})"
@@ -112,7 +112,7 @@ def output_node(state: LangGraph_State) -> LangGraph_State:
     print(f"\nAdam: {state['response']}")
     try:
         requests.post(f"{MCP_URL}/add_message", json={"role": "user", "content": state["user_input"]})
-        requests.post(f"{MCP_URL}/add_message", json={"role": "adam", "content": state["response"]})
+        requests.post(f"{MCP_URL}/add_message", json={"role": "Sorren", "content": state["response"]})
     except Exception as e:
         print("⚠️ Failed to save messages to MCP:", e)
     return state

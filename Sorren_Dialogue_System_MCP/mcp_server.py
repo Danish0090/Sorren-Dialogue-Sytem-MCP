@@ -61,7 +61,7 @@ def estimate_tokens(text: str) -> int:
 
 
 # Copying Gemini Summarizer
-def summarize_history(history: List[dict], MAX_TOKEN=1000) -> str:
+def summarize_history(history: List[dict], MAX_TOKEN=500) -> str:
     if not history:
         return ""
 

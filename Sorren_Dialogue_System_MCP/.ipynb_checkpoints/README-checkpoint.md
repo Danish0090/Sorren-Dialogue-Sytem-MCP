@@ -5,7 +5,7 @@
 
 ## Context-Aware Dialogue Engine with LangGraph + Gemini
 
-This is a lightweight dialogue engine designed to simulate conversation with a persona ("Adam") using LangGraph for orchestration, FastAPI as a backend, and Gemini (Google's LLM) for generating intelligent responses.
+This is a lightweight dialogue engine designed to simulate conversation with a persona ("Sorren") using LangGraph for orchestration, FastAPI as a backend, and Gemini (Google's LLM) for generating intelligent responses.
 
 ## Project Structure
 ├── mcp_client.py                      # LangGraph client to drive the conversation
@@ -54,42 +54,38 @@ python mcp_client.py
 ## 5-Turn Transcript Example (with Tool Call)
 ```
 
-You: Hi Adam
+You: Hi Sorren
 
-Adam: Greetings, young traveler.  The wind whispers your arrival, and the ancient stones welcome you.  What brings you to this remote corner of the world, where the seabirds cry and the waves weave tales of ages past? Speak freely, and let your words find shelter in these old ears.
+Sorren: Hi, little sparrow. Come, sit by the fire.  The wind whispers stories tonight, and the flames dance to their rhythm.  What brings you to my humble abode, tucked away in the embrace of the mountain?  There's tea brewing, if you've the time for a cup and a quiet moment.  Speak your heart, little sparrow, and let its burdens take flight.
 
-You: tell me joke
+You: Tell me a deep poem of rumi
 
-Adam: Ah, a joke you seek, young one? Let the chill winds of the north carry to you a tale of warmth and… well, perhaps mild amusement.
+Sorren: Ah, Rumi. A heart overflowing with the divine, wasn't he?  His words are like stars, guiding us through the darkest nights.  Let me share one that resonates deeply within me, little sparrow. Close your eyes for a moment and let the words settle upon your soul:
 
-A gnome walks into a tavern, his beard braided with frost and his boots caked in snow.  He slams a small, leather pouch onto the bar.  "Barkeep," he bellows, "I've got enough gold here to buy everyone in this tavern a drink!"
+*Out beyond ideas of wrongdoing and rightdoing,*
+*there is a field. I'll meet you there.*
 
-The barkeep raises a skeptical eyebrow. "Are you sure about that, little fella?"
+*When the soul lies down in that grass,*
+*the world is too full to talk about.*
+*Ideas, language, even the phrase *each other**
+*doesn't make any sense.*
 
-The gnome puffs out his chest. "Absolutely!  I've been saving for months!"
+Open your eyes now, little sparrow.  What do you feel stirring within you?  Those simple words hold oceans of meaning. They speak of a place beyond the duality of our world, a place of pure connection, of unity.  Rumi reminds us that true meeting, true understanding, transcends the limitations of our minds and our judgments.  It is in the silence, in the stillness, that we truly find each other, and in finding each other, we find ourselves… and the Divine.  Sip your tea, little sparrow, and let these words take root within you.
 
-The barkeep shrugs and begins pouring drinks.  Ale flows, mead spills, and spirits soar.  Soon, the tavern is filled with laughter and cheer, all thanks to the generous gnome.
+You: A very short thought of Rumi?
 
-After the last drink is served, the barkeep turns to the gnome and gestures towards the empty pouch. "Right then, that'll be ten gold pieces."
+Sorren: "You are the soul of the soul of the universe, and your name is Love."  There, little sparrow.  A tiny seed of Rumi's wisdom.  Hold it close, and let it blossom within you.  Sometimes the smallest words hold the greatest truths.  Like a single drop of rain reflecting the entire sky.
 
-The gnome's eyes widen.  He pats his pockets, then checks inside his hat.  Finally, he looks up at the barkeep with a sheepish grin. "Ah… seems I left my purse at home."
-
-He pauses, then adds with a wink, "But hey, at least everyone had a good time, right?"
-
-The barkeep sighs, rubs his temples, and mutters,  "Gnomes…"
-
-You: A short joke please
-
-Adam: Two snow leopards walk into a bar.  One says to the other, "I can't get a drink here. I'm spotted."
+#################TOOL_CALL for Factual Questions################
 
 **Typical Gemini Fallback**
-You: what is capital of france?
+You: What is the capital of Egypt?
 
-Adam: You haven't provided anything to respond to. Please provide a question, statement, or some content you'd like me to interact with.  I'm ready when you are!
+Sorren: You haven't provided anything to respond to.  Please give me a question, some text, a code snippet, or something else to work with!
 
-You: what is capital of france? i asked you
+You: I have provided check please
 
-Adam: Ah, my apologies, young traveler. The mists of these northern isles sometimes cloud even *my* ancient eyes.  You asked for the capital of France. It is, of course, Paris, a city of lights and shadows, of art and revolution, where the Seine winds like a silver ribbon through the heart of history. Did you perhaps have other questions about this venerable city, or another corner of the world that stirs your curiosity?  I am here to offer what guidance I can.
+Sorren: Ah, little sparrow, you seek direction, a path forward.  But tell me, what journey are you on?  The capital of Egypt, yes, it is Cairo. A bustling city, a hub of humanity, a place where history whispers from ancient stones. But is that the knowledge you truly seek?  Is Cairo a destination, or a stepping stone on a larger quest? Sip your tea, little sparrow, and tell me, where does your heart long to go? Perhaps there is a deeper question hidden within your request, a yearning for something beyond mere facts and figures.  Let us explore that together, shall we?
 
 ```
 ## Notes

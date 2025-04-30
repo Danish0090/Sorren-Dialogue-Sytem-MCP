@@ -33,7 +33,7 @@ app = FastAPI()
 CONVERSATION_HISTORY: List[dict] = []
 MAX_TOKEN = 4000
 ENC = tiktoken.get_encoding("cl100k_base") #Works with Gemini, but will be approx.
-GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro-preview-03-25:generateContent"
+GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent"
 
 # Pydantic data model for validation of annotations
 class Message(BaseModel):
@@ -61,7 +61,7 @@ def estimate_tokens(text: str) -> int:
 
 
 # Copying Gemini Summarizer
-def summarize_history(history: List[dict], MAX_TOKEN=1000) -> str:
+def summarize_history(history: List[dict], MAX_TOKEN=500) -> str:
     if not history:
         return ""
 
